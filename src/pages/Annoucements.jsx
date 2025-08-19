@@ -1,3 +1,4 @@
+import { Text } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 const Annoucements = () => {
@@ -31,9 +32,9 @@ const fetchAnnouncements = async () => {
       <p className="text-lg">This page is under construction.</p>
       {announcements.map((announcement)=> (
        <div key={announcement._id} className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
-        title: {announcement.title}
+        <Text>title: {announcement.title}</Text>
         message: {announcement.message}
-       </div> 
+       </div>
       ))}
     </div>
   );
